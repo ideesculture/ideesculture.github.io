@@ -1,13 +1,16 @@
 {
-  "name": "spaycific-quizz",
-  "description": "Spaycific Zoo quizz app",
+  "name": "ideesculture.github.io",
+  "description": "ideesculture global documentation portal",
   "main": "index.html",
   "authors": [
     "Gautier Michelin"
   ],
   "license": "© 2016 idéesculture",
   "keywords": [
-    "git"
+    "git",
+    "bootstrap",
+    "documentation",
+    "rtfm"
   ],
   "moduleType": [],
   "homepage": "http://www.ideesculture.com",
@@ -20,12 +23,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular-ui-router": "~0.2.15",
-    "angular": "~1.4.6",
     "bootstrap-sass": "~3.3.6",
     "jquery": "~2.1.4",
     "fontawesome": "~4.3.0",
-    "jquery-backgroundpos": "~1.1.4",
-    "localstorage": "~1.4.2"
+    "ubuntu-fontface": "^0.1.10"
   }
 }

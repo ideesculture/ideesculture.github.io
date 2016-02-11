@@ -13,16 +13,18 @@ var bootstrapSass = {
     in: './bower_components/bootstrap-sass'
 };
 
-/*gulp.task('configuring bower', function() {
+gulp.task('configuring bower', function() {
     return bower()
         .pipe(gulp.dest(config.bowerDir))
 });
 
-gulp.task('copying font-awesome icons', function() {
-    return gulp.src(config.bowerDir + '/fontawesome/fonts/**.*')
-        .pipe(gulp.dest('./public/assets/fonts'));
+gulp.task('copying fonts', function() {
+    gulp.src(config.bowerDir + '/fontawesome/fonts/**.*')
+        .pipe(gulp.dest('./assets/fonts'));
+	gulp.src(config.bowerDir + '/ubuntu-fontface/fonts/**.*')
+        .pipe(gulp.dest('./assets/fonts'));
 });
-*/
+
 gulp.task('copying javascript assets', function(){
     gulp.src([
         'bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js',
@@ -41,7 +43,7 @@ gulp.task('compiling sass stylesheets', function() {
             includePaths: [
                 config.bowerDir + '/bootstrap-sass/assets/stylesheets',
                 config.bowerDir + '/fontawesome/scss',
-
+				config.bowerDir + '/ubuntu-fontface',
             ]
         })
             .on("error", notify.onError(function (error) {
@@ -55,4 +57,4 @@ gulp.task('sass:watch', function() {
     gulp.watch(config.sassPath + '/**/*.scss', ['sass']);
 });
 
-gulp.task('default', ['copying javascript assets', 'compiling sass stylesheets']);
+gulp.task('default', ['configuring bower','copying fonts','copying javascript assets', 'compiling sass stylesheets']);
