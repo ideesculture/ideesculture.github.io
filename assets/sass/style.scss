@@ -17,7 +17,7 @@ $font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-h5:            $font-size-base !default;
 $font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
 //** By default, this inherits from the `<body>`.**/
-$headings-font-family:    'Raleway', sans-serif !default;
+$headings-font-family:    "Ubuntu", sans-serif !default;
 $headings-font-weight:    700 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
